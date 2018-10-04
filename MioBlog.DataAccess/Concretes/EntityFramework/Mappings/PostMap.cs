@@ -4,7 +4,7 @@ using System.Data.Entity.ModelConfiguration;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using MioBlog.Entities.Concrete;
+using MioBlog.Entities.Concretes;
 
 namespace MioBlog.DataAccess.Concretes.EntityFramework.Mappings
 {
