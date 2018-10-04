@@ -17,8 +17,8 @@ namespace MioBlog.DataAccess.Concretes.EntityFramework.Mappings
 
             Property(p => p.PostId).HasColumnName("PostId");
             Property(p => p.PostCategoryId).HasColumnName("PostCategoryId");
-            Property(p => p.PostTitle).HasColumnName("PostTitle");
-            Property(p => p.PostSummary).HasColumnName("PostSummary");
+            Property(p => p.PostTitle).HasColumnName("PostTitle").HasMaxLength(100);
+            Property(p => p.PostSummary).HasColumnName("PostSummary").HasMaxLength(250);
             Property(p => p.PostContent).HasColumnName("PostContent");
             Property(p => p.CoverPic).HasColumnName("CoverPic");
             Property(p => p.InsertedDate).HasColumnName("InsertedDate");
