@@ -1,5 +1,4 @@
-﻿using System;
-using FluentValidation;
+﻿using FluentValidation;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using MioBlog.Business.Concretes.Managers;
 using MioBlog.DataAccess.Abstracts;
