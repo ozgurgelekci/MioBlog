@@ -54,7 +54,7 @@ namespace MioBlog.Core.DataAccess.Concretes.EntityFramework
             }
         }
 
-        public void Delete<T>(TEntity entity)
+        public void Delete(TEntity entity)
         {
             using (TContext context = new TContext())
             {
