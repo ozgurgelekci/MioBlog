@@ -8,7 +8,7 @@ using MioBlog.Entities.Concretes;
 
 namespace MioBlog.DataAccess.Abstracts
 {
-    public interface IPostCategoryDal : IEntityRepository<PostCategory>
+    public interface IPostCategoryDal : IEntityRepository<PostCategory> 
     {
 
     }
