@@ -48,8 +48,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Absracts\IPostCategoryDal.cs" />
-    <Compile Include="Absracts\IPostDal.cs" />
+    <Compile Include="Abstracts\IPostCategoryDal.cs" />
+    <Compile Include="Abstracts\IPostDal.cs" />
+    <Compile Include="Concretes\EntityFramework\EfPostCategoryDal.cs" />
+    <Compile Include="Concretes\EntityFramework\EfPostDal.cs" />
     <Compile Include="Concretes\EntityFramework\Mappings\PostCategoryMap.cs" />
     <Compile Include="Concretes\EntityFramework\Mappings\PostMap.cs" />
     <Compile Include="Concretes\EntityFramework\MioContext.cs" />

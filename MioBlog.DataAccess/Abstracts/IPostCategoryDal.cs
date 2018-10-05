@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using MioBlog.Core.DataAccess.Abstracts;
 using MioBlog.Entities.Concretes;
 
-namespace MioBlog.DataAccess.Absracts
+namespace MioBlog.DataAccess.Abstracts
 {
     public interface IPostCategoryDal : IEntityRepository<PostCategory>
     {
