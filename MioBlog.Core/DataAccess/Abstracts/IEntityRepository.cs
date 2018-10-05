@@ -14,6 +14,6 @@ namespace MioBlog.Core.DataAccess.Abstracts
         TEntity Get(Expression<Func<TEntity, bool>> filter = null);
         TEntity Add(TEntity entity);
         TEntity Update(TEntity entity);
-        void Delete<T>(TEntity entity);
+        void Delete(TEntity entity);
     }
 }
