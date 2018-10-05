@@ -1,9 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 using MioBlog.Business.Abstracts;
+using MioBlog.Business.ValidationRules.FluentValidation;
+using MioBlog.Core.Aspects.Postsharp;
 using MioBlog.DataAccess.Abstracts;
 using MioBlog.Entities.Concretes;
 
@@ -28,11 +26,13 @@ namespace MioBlog.Business.Concretes.Managers
             return _postCategoryDal.Get(p => p.PostCategoryId == postCategoryId);
         }
 
+        [FluentValidationAspect(typeof(PostCategoryValidator))]
         public PostCategory Add(PostCategory postCategory)
         {
             return _postCategoryDal.Add(postCategory);
         }
 
+        [FluentValidationAspect(typeof(PostCategoryValidator))]
         public PostCategory Update(PostCategory postCategory)
         {
             return _postCategoryDal.Update(postCategory);
