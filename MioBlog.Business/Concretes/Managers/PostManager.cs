@@ -4,6 +4,8 @@ using MioBlog.Business.ValidationRules.FluentValidation;
 using MioBlog.DataAccess.Abstracts;
 using MioBlog.Entities.Concretes;
 using MioBlog.Core.Aspects.Postsharp;
+using MioBlog.Core.Aspects.Postsharp.CacheAspects;
+using MioBlog.Core.CrossCuttingConcerns.Caching.Microsoft;
 
 namespace MioBlog.Business.Concretes.Managers
 {
@@ -16,6 +18,7 @@ namespace MioBlog.Business.Concretes.Managers
             _postDal = postDal;
         }
 
+        [CacheAspect(typeof(MemoryCacheManager))]
         public List<Post> GetAll()
         {
             return _postDal.GetList();
@@ -32,17 +35,20 @@ namespace MioBlog.Business.Concretes.Managers
         }
 
         [FluentValidationAspect(typeof(PostValidator))]
+        [CacheRemoveAspect(typeof(MemoryCacheManager))]
         public Post Add(Post post)
         {
             return _postDal.Add(post);
         }
 
         [FluentValidationAspect(typeof(PostValidator))]
+        [CacheRemoveAspect(typeof(MemoryCacheManager))]
         public Post Update(Post post)
         {
             return _postDal.Update(post);
         }
 
+        [CacheRemoveAspect(typeof(MemoryCacheManager))]
         public void Delete(Post post)
         {
             _postDal.Delete(post);
