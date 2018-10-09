@@ -33,7 +33,7 @@ namespace MioBlog.Core.Aspects.Postsharp.LogAspects
 
         public override void OnEntry(MethodExecutionArgs args)
         {
-            if (!_loggerService.IsErrorEnabled)
+            if (!_loggerService.IsInfoEnabled)
             {
                 return;
             }
@@ -55,6 +55,7 @@ namespace MioBlog.Core.Aspects.Postsharp.LogAspects
                 };
 
                 _loggerService.Info(logDetail);
+               //_loggerService.Debug(logDetail);
             }
             catch
             {

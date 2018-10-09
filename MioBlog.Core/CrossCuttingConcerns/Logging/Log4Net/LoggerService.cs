@@ -23,24 +23,32 @@ namespace MioBlog.Core.CrossCuttingConcerns.Logging.Log4Net
         {
             if (IsInfoEnabled)
             {
-                _log.Info(logMessage); ;
+                _log.Info(logMessage);
             }
-
+        }
+        public void Debug(object logMessage)
+        {
             if (IsDebugEnabled)
             {
                 _log.Debug(logMessage);
             }
-
+        }
+        public void Warn(object logMessage)
+        {
             if (IsWarnEnabled)
             {
                 _log.Warn(logMessage);
             }
-
+        }
+        public void Fatal(object logMessage)
+        {
             if (IsFatalEnabled)
             {
                 _log.Fatal(logMessage);
             }
-
+        }
+        public void Error(object logMessage)
+        {
             if (IsErrorEnabled)
             {
                 _log.Error(logMessage);
