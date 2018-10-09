@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Threading;
 using MioBlog.Business.Abstracts;
 using MioBlog.Business.ValidationRules.FluentValidation;
 using MioBlog.DataAccess.Abstracts;
@@ -27,6 +28,9 @@ namespace MioBlog.Business.Concretes.Managers
         [PerformanceCounterAspect(3)]
         public List<Post> GetAll()
         {
+            // for test
+            //Thread.Sleep(5000);
+
             return _postDal.GetList();
         }
 
