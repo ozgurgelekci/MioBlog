@@ -43,10 +43,17 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
       <HintPath>..\packages\log4net.2.0.8\lib\net45-full\log4net.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Ninject, Version=3.3.4.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -122,6 +129,10 @@
     <ProjectReference Include="..\MioBlog.Business\MioBlog.Business.csproj">
       <Project>{A7FEC013-137D-4ED2-9374-0361AB3B4779}</Project>
       <Name>MioBlog.Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MioBlog.Core\MioBlog.Core.csproj">
+      <Project>{C4867741-3CA8-4776-9AF3-C33CDF9D011B}</Project>
+      <Name>MioBlog.Core</Name>
     </ProjectReference>
     <ProjectReference Include="..\MioBlog.Entities\MioBlog.Entities.csproj">
       <Project>{64C82F8C-3531-4922-A3BD-C62B3F63A000}</Project>
