@@ -1,6 +1,7 @@
 ﻿using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
+using MioBlog.Core.Aspects.Postsharp.ExcepitonAspects;
 using MioBlog.Core.Aspects.Postsharp.LogAspects;
 using MioBlog.Core.CrossCuttingConcerns.Logging.Log4Net.Loggers;
 
@@ -16,9 +17,14 @@ using MioBlog.Core.CrossCuttingConcerns.Logging.Log4Net.Loggers;
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
-//All managers classes
+//Info Logger
 //[assembly:LogAspect(typeof(FileLogger),AttributeTargetTypes = "MioBlog.Business.Concretes.Managers.*")]
 //[assembly: LogAspect(typeof(DatabaseLogger), AttributeTargetTypes = "MioBlog.Business.Concretes.Managers.*")]
+
+// ExceptionLogAspect
+//[assembly: ExceptionLogAspect(typeof(DatabaseLogger), AttributeTargetTypes = "MioBlog.Business.Concretes.Managers.*")]
+//[assembly: ExceptionLogAspect(typeof(FileLogger), AttributeTargetTypes = "MioBlog.Business.Concretes.Managers.*")]
+
 
 // Setting ComVisible to false makes the types in this assembly not visible
 // to COM components.  If you need to access a type in this assembly from
