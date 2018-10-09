@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Concretes\Log.cs" />
     <Compile Include="Concretes\Post.cs" />
     <Compile Include="Concretes\PostCategory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

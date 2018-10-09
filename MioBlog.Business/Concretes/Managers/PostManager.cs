@@ -5,7 +5,9 @@ using MioBlog.DataAccess.Abstracts;
 using MioBlog.Entities.Concretes;
 using MioBlog.Core.Aspects.Postsharp;
 using MioBlog.Core.Aspects.Postsharp.CacheAspects;
+using MioBlog.Core.Aspects.Postsharp.LogAspects;
 using MioBlog.Core.CrossCuttingConcerns.Caching.Microsoft;
+using MioBlog.Core.CrossCuttingConcerns.Logging.Log4Net.Loggers;
 
 namespace MioBlog.Business.Concretes.Managers
 {
@@ -19,6 +21,8 @@ namespace MioBlog.Business.Concretes.Managers
         }
 
         [CacheAspect(typeof(MemoryCacheManager))]
+        [LogAspect(typeof(DatabaseLogger))]
+        [LogAspect(typeof(FileLogger))]
         public List<Post> GetAll()
         {
             return _postDal.GetList();

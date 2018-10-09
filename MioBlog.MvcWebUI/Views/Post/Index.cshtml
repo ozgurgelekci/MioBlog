@@ -1,0 +1,17 @@
+﻿@model MioBlog.MvcWebUI.Models.Posts.PostListModel
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Post List</title>
+</head>
+<body>
+
+@foreach (var post in Model.Posts)
+{
+    <b>@post.PostTitle</b><br/>
+}
+
+</body>
+</html>

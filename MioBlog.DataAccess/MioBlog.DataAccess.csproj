@@ -52,6 +52,7 @@
     <Compile Include="Abstracts\IPostDal.cs" />
     <Compile Include="Concretes\EntityFramework\EfPostCategoryDal.cs" />
     <Compile Include="Concretes\EntityFramework\EfPostDal.cs" />
+    <Compile Include="Concretes\EntityFramework\Mappings\LogMap.cs" />
     <Compile Include="Concretes\EntityFramework\Mappings\PostCategoryMap.cs" />
     <Compile Include="Concretes\EntityFramework\Mappings\PostMap.cs" />
     <Compile Include="Concretes\EntityFramework\MioContext.cs" />
