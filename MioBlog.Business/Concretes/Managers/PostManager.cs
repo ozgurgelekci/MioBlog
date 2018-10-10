@@ -5,6 +5,7 @@ using MioBlog.Business.ValidationRules.FluentValidation;
 using MioBlog.DataAccess.Abstracts;
 using MioBlog.Entities.Concretes;
 using MioBlog.Core.Aspects.Postsharp;
+using MioBlog.Core.Aspects.Postsharp.AuthorizationAspects;
 using MioBlog.Core.Aspects.Postsharp.CacheAspects;
 using MioBlog.Core.Aspects.Postsharp.LogAspects;
 using MioBlog.Core.Aspects.Postsharp.PerformanceAspects;
@@ -26,6 +27,7 @@ namespace MioBlog.Business.Concretes.Managers
         [LogAspect(typeof(DatabaseLogger))]
         [LogAspect(typeof(FileLogger))]
         [PerformanceCounterAspect(3)]
+        [SecuredOperation(Roles = "Admin")]
         public List<Post> GetAll()
         {
             // for test
@@ -34,11 +36,14 @@ namespace MioBlog.Business.Concretes.Managers
             return _postDal.GetList();
         }
 
+        [CacheAspect(typeof(MemoryCacheManager))]
+        [LogAspect(typeof(DatabaseLogger))]
+        [SecuredOperation(Roles="Admin")]
         public List<Post> GetAllWithCategoryId(int postCategoryId)
         {
             return _postDal.GetList(p => p.PostCategoryId == postCategoryId);
         }
-
+        
         public Post GetById(int postId)
         {
             return _postDal.Get(p => p.PostId == postId);
