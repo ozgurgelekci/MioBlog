@@ -70,8 +70,10 @@
   <ItemGroup>
     <Compile Include="Abstracts\IPostCategoryService.cs" />
     <Compile Include="Abstracts\IPostService.cs" />
+    <Compile Include="Abstracts\IUserService.cs" />
     <Compile Include="Concretes\Managers\PostCategoryManager.cs" />
     <Compile Include="Concretes\Managers\PostManager.cs" />
+    <Compile Include="Concretes\Managers\UserManager.cs" />
     <Compile Include="DependencyResolvers\Ninject\BusinessModule.cs" />
     <Compile Include="DependencyResolvers\Ninject\ValidationModule.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

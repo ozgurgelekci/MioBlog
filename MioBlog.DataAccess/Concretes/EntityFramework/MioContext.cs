@@ -20,12 +20,18 @@ namespace MioBlog.DataAccess.Concretes.EntityFramework
         public DbSet<Post> Posts { get; set; }
         public DbSet<PostCategory> PostCategories { get; set; }
         public DbSet<Log> Logs { get; set; }
+        public DbSet<User> Users { get; set; }
+        public DbSet<Role> Roles { get; set; }
+        public DbSet<UserRole> UserRoles { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Configurations.Add(new PostCategoryMap());
             modelBuilder.Configurations.Add(new PostMap());
             modelBuilder.Configurations.Add(new LogMap());
+            modelBuilder.Configurations.Add(new UserMap());
+            modelBuilder.Configurations.Add(new RoleMap());
+            modelBuilder.Configurations.Add(new UserRoleMap());
         }
     }
 }

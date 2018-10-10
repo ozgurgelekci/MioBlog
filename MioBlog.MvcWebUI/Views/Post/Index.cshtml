@@ -1,17 +1,17 @@
 ﻿@model MioBlog.MvcWebUI.Models.Posts.PostListModel
 
-<!DOCTYPE html>
+<h2>Post List</h2>
 
-<html>
-<head>
-    <title>Post List</title>
-</head>
-<body>
-
-@foreach (var post in Model.Posts)
+@if (TempData["authMessage"] != null)
 {
-    <b>@post.PostTitle</b><br/>
+    <div class="alert alert-secondary" role="alert">
+        @TempData["authMessage"]
+    </div>
 }
-
-</body>
-</html>
+else
+{
+    foreach (var post in Model.Posts)
+    {
+        <b>@post.PostTitle</b><br />
+    }
+}

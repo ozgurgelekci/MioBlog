@@ -41,9 +41,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ComplexTypes\UserRoleItem.cs" />
     <Compile Include="Concretes\Log.cs" />
     <Compile Include="Concretes\Post.cs" />
     <Compile Include="Concretes\PostCategory.cs" />
+    <Compile Include="Concretes\Role.cs" />
+    <Compile Include="Concretes\User.cs" />
+    <Compile Include="Concretes\UserRole.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />

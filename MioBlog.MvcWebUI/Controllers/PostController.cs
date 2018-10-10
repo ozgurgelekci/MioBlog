@@ -1,10 +1,8 @@
 ﻿using MioBlog.Business.Abstracts;
 using MioBlog.MvcWebUI.Models.Posts;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Web.Mvc;
+using MioBlog.MvcWebUI.Models;
 
 namespace MioBlog.MvcWebUI.Controllers
 {
@@ -20,12 +18,21 @@ namespace MioBlog.MvcWebUI.Controllers
         // GET: Post
         public ActionResult Index()
         {
-            var model = new PostListModel
+            try
             {
-                Posts = _postService.GetAll()
-            };
+                var model = new PostListModel
+                {
+                    Posts = _postService.GetAll()
+                };
 
-            return View(model);
+                return View(model);
+            }
+            catch (Exception exception)
+            {
+                TempData["authMessage"] = exception.Message;
+
+                return View();
+            }
         }
     }
 }

@@ -27,7 +27,7 @@ namespace MioBlog.Business.Concretes.Managers
         [LogAspect(typeof(DatabaseLogger))]
         [LogAspect(typeof(FileLogger))]
         [PerformanceCounterAspect(3)]
-        [SecuredOperation(Roles = "Admin")]
+        [SecuredOperation(Roles = "Student")]
         public List<Post> GetAll()
         {
             // for test

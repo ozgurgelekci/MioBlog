@@ -50,11 +50,16 @@
   <ItemGroup>
     <Compile Include="Abstracts\IPostCategoryDal.cs" />
     <Compile Include="Abstracts\IPostDal.cs" />
+    <Compile Include="Abstracts\IUserDal.cs" />
     <Compile Include="Concretes\EntityFramework\EfPostCategoryDal.cs" />
     <Compile Include="Concretes\EntityFramework\EfPostDal.cs" />
+    <Compile Include="Concretes\EntityFramework\EfUserDal.cs" />
     <Compile Include="Concretes\EntityFramework\Mappings\LogMap.cs" />
     <Compile Include="Concretes\EntityFramework\Mappings\PostCategoryMap.cs" />
     <Compile Include="Concretes\EntityFramework\Mappings\PostMap.cs" />
+    <Compile Include="Concretes\EntityFramework\Mappings\RoleMap.cs" />
+    <Compile Include="Concretes\EntityFramework\Mappings\UserMap.cs" />
+    <Compile Include="Concretes\EntityFramework\Mappings\UserRoleMap.cs" />
     <Compile Include="Concretes\EntityFramework\MioContext.cs" />
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
